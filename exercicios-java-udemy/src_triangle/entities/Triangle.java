@@ -1,4 +1,4 @@
-package src.entities;
+package src_triangle.entities;
 
 public class Triangle {
     public double a; 
