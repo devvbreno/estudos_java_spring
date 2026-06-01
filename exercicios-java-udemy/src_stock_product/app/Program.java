@@ -9,15 +9,15 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        
-        Product product = new Product();
+                
         System.out.println("Enter product data ---> ");
         System.out.println("Name: ");
-        product.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.println("Select price: ");
-        product.price = sc.nextDouble();
+        Double price = sc.nextDouble();
         System.out.println("Select quantity: ");
-        product.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
+        Product product = new Product(name, price, quantity);
 
         System.out.println(product.name + " , " + product.price + " , " + product.quantity );
 
