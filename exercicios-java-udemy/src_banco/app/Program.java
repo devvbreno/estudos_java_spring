@@ -3,32 +3,31 @@ package src_banco.app;
 import java.util.Locale;
 import java.util.Scanner;
 
-import src_banco.entities.BankAccount;
+import src_banco.entities.Account;
 
 public class Program {
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        Account bank_account;
 
         System.out.println("Enter account number: ");
-        String account = sc.nextLine();
+        int number = sc.nextInt();
 
         System.out.println("Enter account holder: ");
         String holder = sc.nextLine();
 
         System.out.println("Is there na initial deposit (y/n)? ");
-        String answer = sc.nextLine();
+        char response = sc.next().charAt(0);
 
-        BankAccount bank_account;
-
-        if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("Y")) {
+        if (response == 'y') {
             System.out.println("Enter initial deposit: ");
-            double balance = sc.nextDouble();
-            bank_account = new BankAccount(account, holder, balance);
+            double initialDeposit = sc.nextDouble();
+            bank_account = new Account(account, holder, balance);
         }
         else {
-            bank_account = new BankAccount(account, holder);
+            bank_account = new Account(account, holder);
         }
         
         System.out.println("Account data: " + bank_account);

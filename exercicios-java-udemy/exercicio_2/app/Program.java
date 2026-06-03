@@ -2,6 +2,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import exercicio_2.entities.Employee;
+import src_.entities.Product;
 
 public class Program {
     public static void main(String[] args) {
